@@ -21,7 +21,7 @@ ts.plot();
 > 多曲线（带label）折线图
 ```
 df = pd.DataFrame(np.random.randn(1000, 4), index=ts.index, columns=list("ABCD"))
-df = df.cumsum()
+df = df.cumsum() 
 plt.figure();
 df.plot(); 
 ```
