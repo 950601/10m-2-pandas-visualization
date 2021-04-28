@@ -25,3 +25,4 @@ df = df.cumsum()
 plt.figure();
 df.plot(); 
 ```
+ 
