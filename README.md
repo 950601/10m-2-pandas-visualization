@@ -73,7 +73,7 @@ df4["a"].plot.hist(orientation="horizontal", cumulative=True)
 data = pd.Series(np.random.randn(1000))
 data.hist(by=np.random.randint(0, 4, 1000), figsize=(6, 4))
 ```
-
+ 
 
 
 
