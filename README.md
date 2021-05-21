@@ -4,7 +4,7 @@
 > 导入包
 ```
 import matplotlib.pyplot as plt
-plt.close("all")
+plt.close("all") 
 ``` 
 
 - **画图** 
