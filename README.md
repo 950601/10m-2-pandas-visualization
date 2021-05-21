@@ -1,13 +1,14 @@
+
 ### 数据可视化
 
 - **导入plot包**
 > 导入包
 ```
 import matplotlib.pyplot as plt
-plt.close("all") 
-``` 
+plt.close("all")
+```
 
-- **画图** 
+- **画图**
 > 折线图
 ```
 ts = pd.Series(np.random.randn(1000), index=pd.date_range("1/1/2000", periods=1000))
@@ -151,7 +152,83 @@ df.plot.scatter(x="a", y="b", c="c", s=50)
 ```
 df.plot.scatter(x="a", y="b", s=df["c"] * 200)
 ```
- 
+
+
+> 六边柱状图
+> 六边柱状图 用于散点图点分布太多繁多的情况下使用
+
+> 创建六边柱状图
+> gridsize参数用于控制x轴的数据范围大小，默认值是100
+```
+df = pd.DataFrame(np.random.randn(1000, 2), columns=["a", "b"])
+df["b"] = df["b"] + np.arange(1000)
+df.plot.hexbin(x="a", y="b", gridsize=25)
+```
+
+> 用z列作为值列，a,b列作为定位列
+```
+df = pd.DataFrame(np.random.randn(1000, 2), columns=["a", "b"])
+df["b"] = df["b"] = df["b"] + np.arange(1000)
+df["z"] = np.random.uniform(0, 3, 1000)
+df.plot.hexbin(x="a", y="b", C="z", reduce_C_function=np.max, gridsize=25)
+```
+
+
+> 饼图
+> 在饼图中，空值将默认填充为0，如果值有负数，那么会抛出ValueError 
+
+> 创建饼图
+```
+series = pd.Series(3 * np.random.rand(4), index=["a", "b", "c", "d"], name="series")
+series.plot.pie(figsize=(6, 6))
+
+```
+
+> 设置坐标轴精度的范围
+> legend 图例 subplots 子图（根据列来显示）
+```
+df = pd.DataFrame(3 * np.random.rand(4, 2), index=["a", "b", "c", "d"], columns=["x", "y"])
+df.plot.pie(subplots=True, figsize=(8, 4))
+```
+
+
+> 设置扇形区域的字体以及显示
+```
+series.plot.pie(
+     labels=["AA", "BB", "CC", "DD"],
+     colors=["r", "g", "b", "c"],
+     autopct="%.2f", # 格式化扇形的占比数字，输出两位小数
+     fontsize=20, # 扇形内字体大小
+     figsize=(6, 6),
+   );
+```
+
+
+> 当数值占比不足100%时，饼图会画为半圆
+```
+series = pd.Series([0.1] * 4, index=["a", "b", "c", "d"], name="series2")
+series.plot.pie(figsize=(6, 6))
+```
+
+> 散点矩阵图
+> diagonal 斜线区域可选参数 => kde:折线 hist:直方图
+```
+from pandas.plotting import scatter_matrix
+df = pd.DataFrame(np.random.randn(1000, 4), columns=["a", "b", "c", "d"])
+scatter_matrix(df, alpha=0.2, figsize=(6, 6), diagonal="kde")
+```
+
+> 密度图
+```
+ser = pd.Series(np.random.randn(1000))
+ser.plot.kde();
+```
+
+> 使用第三方画图
+```
+Series([1, 2, 3]).plot(backend="backend.module")
+```
+
 
 
 
