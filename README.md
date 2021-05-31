@@ -2,10 +2,10 @@
 ### 数据可视化
 
 - **导入plot包**
-> 导入包
+> 导入包 
 ``` 
 import matplotlib.pyplot as plt
-plt.close("all")
+plt.close("all") 
 ```
 
 - **画图**
