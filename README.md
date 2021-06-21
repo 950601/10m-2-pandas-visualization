@@ -1,7 +1,7 @@
 
 ### 数据可视化
 
-- **导入plot包** 
+- **导入plot包**  
 > 导入包   
 ``` 
 import matplotlib.pyplot as plt  
