@@ -32,7 +32,7 @@ plt.show()
 ```
 
 > 列聚合柱状图
-```
+``` 
 df2 = pd.DataFrame(np.random.rand(6, 4), columns=["a", "b", "c", "d"])
 df2.plot.bar()
 plt.show()
