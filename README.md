@@ -226,7 +226,7 @@ ser.plot.kde();
 
 > 使用第三方画图
 ```
-Series([1, 2, 3]).plot(backend="backend.module")
+Series([1, 2, 3]).plot(backend="backend.module") 
 ```
 
 
