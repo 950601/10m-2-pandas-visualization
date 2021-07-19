@@ -4,7 +4,7 @@
 - **导入plot包**  
 > 导入包    
 ``` 
-import matplotlib.pyplot as plt  
+import matplotlib.pyplot as plt   
 plt.close("all") 
 ```
 
