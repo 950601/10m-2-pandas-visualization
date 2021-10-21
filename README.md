@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 plt.close("all") 
 ```
 
-- **画图**
+- **画图** 
 > 折线图
 ```
 ts = pd.Series(np.random.randn(1000), index=pd.date_range("1/1/2000", periods=1000))
