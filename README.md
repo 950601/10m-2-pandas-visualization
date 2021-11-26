@@ -6,7 +6,7 @@
 ``` 
 import matplotlib.pyplot as plt   
 plt.close("all") 
-``` 
+```  
  
 - **画图** 
 > 折线图 
