@@ -4,7 +4,7 @@
 - **导入plot包**  
 > 导入包    
 ``` 
-import matplotlib.pyplot as plt   
+import matplotlib.pyplot as plt    
 plt.close("all") 
 ```   
  
@@ -23,11 +23,11 @@ df = df.cumsum()
 plt.figure();
 df.plot();
 ```
-
+ 
 
 > 柱状图
 ```
-df.iloc[1].plot.bar()
+df.iloc[1].plot.bar() 
 plt.show()
 ``` 
 
