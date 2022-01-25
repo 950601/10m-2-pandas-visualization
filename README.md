@@ -29,7 +29,7 @@ df.plot();
 ```
 df.iloc[1].plot.bar() 
 plt.show()
-``` 
+```  
 
 > 列聚合柱状图
 ``` 
