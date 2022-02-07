@@ -1,7 +1,7 @@
 
 ### 数据可视化  
  
-- **导入plot包**  
+- **导入plot包**   
 > 导入包     
 ``` 
 import matplotlib.pyplot as plt    
@@ -30,7 +30,7 @@ df.plot();
 df.iloc[1].plot.bar() 
 plt.show()
 ```  
-
+ 
 > 列聚合柱状图
 ``` 
 df2 = pd.DataFrame(np.random.rand(6, 4), columns=["a", "b", "c", "d"])
