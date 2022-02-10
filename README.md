@@ -26,7 +26,7 @@ df.plot();
  
 
 > 柱状图
-```
+``` 
 df.iloc[1].plot.bar() 
 plt.show() 
 ```  
