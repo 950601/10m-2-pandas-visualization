@@ -206,7 +206,7 @@ series.plot.pie(
 
 > 当数值占比不足100%时，饼图会画为半圆
 ```
-series = pd.Series([0.1] * 4, index=["a", "b", "c", "d"], name="series2")
+series = pd.Series([0.1] * 4, index=["a", "b", "c", "d"], name="series2") 
 series.plot.pie(figsize=(6, 6))
 ```
 
